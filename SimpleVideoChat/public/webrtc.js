@@ -7,8 +7,8 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
   || window.msSpeechRecognition || window.oSpeechRecognition;
 
 var config = {
-  wssHost: 'wss://wotpal.club'
-  // wssHost: 'wss://example.com/myWebSocket'
+  //wssHost: 'wss://public.beuth-hochschule.de/~s65733/webRTC/SimpleVideoChat/'
+  wssHost: 'wss://example.com/myWebSocket'
 };
 var localVideoElem = null, 
   remoteVideoElem = null, 
