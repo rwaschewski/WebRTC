@@ -3,9 +3,10 @@
     <head>
         <title>EZPZ Video-Conferencing</title>
         <link rel="stylesheet" href="/css/main.css">
+        <script src="https://simplewebrtc.com/latest-v2.js"></script>
     </head>
     <body>
-        <h1 id="title">EZPZ Video-Cenferencing</h1></br>
+        <h1 id="title">RoToJa-The Video-Conferencing Tool</h1></br>
         <h2 id="start">Open or Join a Room</h2>
         <style>
             .videoContainer {
@@ -32,13 +33,15 @@
         <form id="createRoom">
             <input id="sessionInput"/>
             <button type="submit">Create it!</button>
+
         </form>
+        <button id="screenShareButton"></button>
         <div class="videoContainer">
             <video id="localVideo" autoplay style="height: 150px;" oncontextmenu="return false;"></video>
             <div id="localVolume" class="volume_bar"></div>
         </div>
         <div id="remotes"></div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="simplewebrtc.bundle.js"></script>
         <script>
             // grab the room from the URL
