@@ -1,15 +1,18 @@
-.var WebRTC = require('./webrtc');
+var WebRTC = require('./webrtc');
 var WildEmitter = require('wildemitter');
 var webrtcSupport = require('webrtcsupport');
 var attachMediaStream = require('attachmediastream');
 var mockconsole = require('mockconsole');
 var SocketIoConnection = require('./socketioconnection');
+var signalmaster = require('signalmaster');
+var sockets = require('signalmaster/sockets')
 
 function SimpleWebRTC(opts) {
     var self = this;
     var options = opts || {};
     var config = this.config = {
-            url: 'https://sandbox.simplewebrtc.com:443/',
+            //url: 'https://sandbox.simplewebrtc.com:443/',
+            url: 'https://localhost:8888',
             socketio: {'force new connection':true},
             connection: null,
             debug: false,
@@ -21,7 +24,7 @@ function SimpleWebRTC(opts) {
             adjustPeerVolume: false,
             peerVolumeWhenSpeaking: 0.25,
             media: {
-                video: {height: 300 width:480},
+                video: true,
                 audio: true
             },
             receiveMedia: {

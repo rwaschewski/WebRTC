@@ -28,7 +28,7 @@
                 background-color: #12acef;
             }
         </style>
-
+        <button id="screenShareButton"></button>
         <p id="subTitle"></p>
         <form id="createRoom">
             <input id="sessionInput"/>
@@ -142,7 +142,7 @@
 
             var button = $('#screenShareButton'),
                 setButton = function (bool) {
-                    button.text(bool ? 'share screen' : 'stop sharing');
+                    button.text(bool ? 'Share Screen' : 'stop sharing');
                 };
             webrtc.on('localScreenStopped', function () {
                 setButton(true);

@@ -26,7 +26,7 @@ function Peer(options) {
     this.parent = options.parent;
     this.type = options.type || 'video';
     this.oneway = options.oneway || false;
-    this.sharemyscreen = options.sharemyscreen || false;
+    this.sharemyscreen = options.sharemyscreen || true;
     this.browserPrefix = options.prefix;
     this.stream = options.stream;
     this.enableDataChannels = options.enableDataChannels === undefined ? this.parent.config.enableDataChannels : options.enableDataChannels;

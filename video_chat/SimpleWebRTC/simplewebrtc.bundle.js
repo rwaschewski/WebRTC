@@ -1634,7 +1634,7 @@ JSONPPolling.prototype.doPoll = function () {
   this.script = script;
 
   var isUAgecko = 'undefined' != typeof navigator && /gecko/i.test(navigator.userAgent);
-  
+
   if (isUAgecko) {
     setTimeout(function () {
       var iframe = document.createElement('iframe');
@@ -17905,8 +17905,9 @@ function SimpleWebRTC(opts) {
     var self = this;
     var options = opts || {};
     var config = this.config = {
-            url: 'https://sandbox.simplewebrtc.com:443/',
-            socketio: {/* 'force new connection':true*/},
+            //url: 'https://sandbox.simplewebrtc.com:443/',
+            url: 'https://localhost:8888',
+            socketio: {'force new connection':true},
             connection: null,
             debug: false,
             localVideoEl: '',
