@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EZPZ Video-Conferencing</title>
+        <title>RoToJa</title>
         <link rel="stylesheet" href="/css/main.css">
         <script src="https://simplewebrtc.com/latest-v2.js"></script>
     </head>
     <body>
-        <h1 id="title">RoToJa-The Video-Conferencing Tool</h1></br>
+        <h1 id="title">RoToJa-The Video-Conferencing Tool</h1>
         <h2 id="start">Open or Join a Room</h2>
         <style>
             .videoContainer {
                 position: relative;
-                width: 200px;
+                width: 1200px;
                 height: 150px;
             }
             .videoContainer video {
@@ -33,9 +33,7 @@
         <form id="createRoom">
             <input id="sessionInput"/>
             <button type="submit">Create it!</button>
-
         </form>
-        <button id="screenShareButton"></button>
         <div class="videoContainer">
             <video id="localVideo" autoplay style="height: 150px;" oncontextmenu="return false;"></video>
             <div id="localVolume" class="volume_bar"></div>
@@ -46,7 +44,6 @@
         <script>
             // grab the room from the URL
             var room = location.search && location.search.split('?')[1];
-
             // create our webrtc connection
             var webrtc = new SimpleWebRTC({
                 // the id/element dom element that will hold "our" video
@@ -122,6 +119,7 @@
 
             if (room) {
                 setRoom(room);
+                console.log("Room: " + room)
             } else {
                 $('form').submit(function () {
                     var val = $('#sessionInput').val().toLowerCase().replace(/\s/g, '-').replace(/[^A-Za-z0-9_\-]/g, '');

@@ -17904,6 +17904,8 @@ var SocketIoConnection = require('./socketioconnection');
 function SimpleWebRTC(opts) {
     var self = this;
     var options = opts || {};
+    var signalServerUrl
+
     var config = this.config = {
             //url: 'https://sandbox.simplewebrtc.com:443/',
             url: 'https://localhost:8888',
